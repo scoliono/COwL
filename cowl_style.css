@@ -1,0 +1,87 @@
+@font-face {
+    font-family: Futura;
+    src: url(https://overwatch-a.akamaihd.net/fonts/FuturaNo2D-DemiBold-98f2fdd61b56a515bb9b6e74e00a71a3d5f83cfa5a3333b17b2576f3ef282cc29b29c8bb3a885d763627b7ce12db1c5060bfcbe80b60ee98855d59ee816f6e5c.eot);
+    src: url(https://overwatch-a.akamaihd.net/fonts/FuturaNo2D-DemiBold-6109ce4d3e61ce549556924258e8a3bb9a17599f0532c63395e23571d9135963193d465262e32ef89a31f0247dff22c3f46b0f5bd5b3259222d1f55b3b496ac0.woff) format("woff"),url(https://overwatch-a.akamaihd.net/fonts/FuturaNo2D-DemiBold-3b3b5cb31e2bb1363260b80b7bcfd671618b11ace6c1192bc678abe9ba7199f93e56ca327d660fd1aa5987cb32bc1cf16dd2fc63c20c4504263d13672540c32a.ttf) format("truetype"),url(https://overwatch-a.akamaihd.net/fonts/FuturaNo2D-DemiBold.svg#futura) format("svg");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Big Noodle Too;
+    src: url(https://overwatch-a.akamaihd.net/fonts/big-noodle-too-6c57d058d1979cbf30e5b5b02638ef0d835f2c29502e0efa328ff91f75e8412a9c82fbf440b896377ed62506d1787666f67f81b99ef004a230c6fcf084b7a3fa.eot);
+    src: url(https://overwatch-a.akamaihd.net/fonts/big-noodle-too.eot?#iefix) format("embedded-opentype"),url(https://overwatch-a.akamaihd.net/fonts/big-noodle-too-oblique-0762bcfb7ce452ecfa21830ab40ee34f9bf2e6fbcecb649c8995bd59fdf93a74a8345855c3890ec3901ac7ca442040112f37f387c98a57ced5af61d92ee8e06c.woff) format("woff"),url(https://overwatch-a.akamaihd.net/fonts/big-noodle-too-6fb923dc5ced5be50c4912cfefa93d8b09a54f1947dc5ca4584c79dfd393cdd4b166d0e8c7dee293f0df2f84c878b7846a83770941504b1b24671c2854577ce9.ttf) format("truetype"),url(https://overwatch-a.akamaihd.net/fonts/big-noodle-too.svg#bignoodletoo) format("svg");
+    font-weight: 400;
+    font-style: normal;
+}
+/*
+both of these font faces are taken from playoverwatch.com's homepage.
+*/
+
+body{
+    float: left;
+    font-family: Futura;
+}
+div#stats {
+    width: 1000px;
+}
+fieldset {
+    border: 0px;
+    padding: 2px;
+}
+fieldset > fieldset {
+    display: none;
+}
+legend {
+    font-family: "Big Noodle Too";
+    font-size: 36px;
+}
+label {
+    float: left;
+    background-color: rgba(147,151,162,1);
+    height: 30px;
+    width: 1000px;
+    margin: 5px;
+    color: white;
+    padding: 0 0 0 10px;
+    font-size: 20px;
+}
+
+select {
+    background-color: rgba(39,169,227,.5);
+    padding: 5px 0 0 0;
+    height: inherit;
+    width: 300px;
+    float: right;
+    border: 0px;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+input[type=range] {
+    background-color: inherit;
+    border-radius: 3px;
+    padding: 5px 0 0 0;
+    float: right;
+    border: 0px;
+}
+
+input[type=number] {
+    background-color: inherit;
+    padding: 5px 0 0 0;
+    width: 60px;
+    border: 0px;
+    text-align: center;
+    float: right;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+#results {
+    border: red;
+    border-width: 5px;
+    font-family: Futura;
+    float: right;
+    position: absolute;
+}
