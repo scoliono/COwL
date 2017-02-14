@@ -17,7 +17,6 @@ $(document).ready(function() {
                 n = document.createElement("p");
                 n.id = xid;
                 document.getElementById('results').appendChild(n);
-//                console.log("made new p tag, added to div")
             }
             var xxid = "#" + xid;
             $(xxid).text("Change dropdown at \"" + pid.join(" => ") + "\" from \"" + odef.text() + "\" to \"" + cval.text() + "\".");

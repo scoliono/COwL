@@ -9,4 +9,3 @@ function syncToText(id) {
     txt = document.getElementById(id + "-text");
     txt.value = rng.value;
 }
-
