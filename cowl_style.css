@@ -15,11 +15,8 @@
 }
 /*
 both of these font faces are taken from playoverwatch.com's homepage.
+TODO: download them and put them in the repo.
 */
-div#nav {
-
-}
-
 body{
     float: left;
     font-family: Futura;
