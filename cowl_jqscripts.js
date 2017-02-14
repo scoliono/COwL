@@ -28,6 +28,31 @@ $(document).ready(function() {
         setChangesText($(this), $(this).val() != $(this).attr("data-default"), "Change slider at \"*\" from \"" + $(this).attr("data-default") + "\" to \"*\".");
     });
 
+    $("#advio").change(function(){
+        getIOText($(this));
+    });
+
+    function getIOText(t) {
+        try {
+            j = JSON.parse(t);
+//            j = JSON.parse(t.val());
+/*
+step into the object, iterate over all arrays in parent object
+
+
+
+
+
+*/
+            }
+        } catch(e){
+            console.log(e);
+        }
+    }
+
+    function setIOText(t) {
+        t.val();
+    }
 
     function setChangesText(t, test, text) {
         var pid = t.parent().attr("id").split("_").join("-");
@@ -44,7 +69,5 @@ $(document).ready(function() {
         } else {
             $(xxid).text("");
         }
-
-
     }
 });

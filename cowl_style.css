@@ -85,6 +85,6 @@ input[type=number] {
     border: red;
     border-width: 5px;
     font-family: Futura;
-    float: right;
-    position: absolute;
+/*    float: right;
+    position: absolute;*/
 }
