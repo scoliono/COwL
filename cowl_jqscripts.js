@@ -11,47 +11,63 @@ $(document).ready(function() {
     });
 
     $("select").change(function() {
-        var odef = $(this).find("option[name='def']").val();
-        var cval = $(this).find(":selected").val();
+        var odef = $(this).find("option[name='def']").text();
+        var cval = $(this).find(":selected").text();
         setChangesText($(this), cval != odef, "Change dropdown at \"*\" from \"" + odef + "\" to \"*\"");
+        setIOText($(this), cval != odef);
     });
 
 
     $("input[type='range']").on("mousedown mousemove change", function(e) {
-        syncToText($(this).parent().attr("id"));
-        setChangesText($(this), $(this).val() != $(this).attr("data-default"), "Change slider at \"*\" from \"" + $(this).attr("data-default") + "\" to \"*\"");
+        if ($(this).val() != $(this).siblings().val()) {
+            syncToText($(this).parent().attr("id"));
+            setChangesText($(this), $(this).val() != $(this).attr("data-default"), "Change slider at \"*\" from \"" + $(this).attr("data-default") + "\" to \"*\"");
+            setIOText($(this), $(this).val() != $(this).attr("data-default"));
+        }
     });
 
 
     $("input[type='number']").on("mousedown mousemove change", function(e) {
-        syncToRange($(this).parent().attr("id"));
-        setChangesText($(this), $(this).val() != $(this).attr("data-default"), "Change slider at \"*\" from \"" + $(this).attr("data-default") + "\" to \"*\".");
+        if ($(this).val() != $(this).siblings().val()) {
+            syncToRange($(this).parent().attr("id"));
+            setChangesText($(this), $(this).val() != $(this).attr("data-default"), "Change slider at \"*\" from \"" + $(this).attr("data-default") + "\" to \"*\".");
+            setIOText($(this), $(this).val() != $(this).attr("data-default"));
+        }
     });
 
     $("#advio").change(function(){
         getIOText($(this));
     });
 
-    function getIOText(t) {
+    function getIOText(ta) {
         try {
-            j = JSON.parse(t);
-//            j = JSON.parse(t.val());
-/*
-step into the object, iterate over all arrays in parent object
+            j = JSON.parse(ta.val());
+            for(key in j) {
+                id = "[id='"+ key;
+                if($(id + "']").find("select").length == 1) {
+                    $(id + "']").find("select").val(j[key]);
+                } else if($(id + "']").find(id + "-range']").length == 1) {
+                    $(id + "']").find(id + "-range']").val(j[key]);
+                    syncToText(key)
+                }
 
-
-
-
-
-*/
             }
-        } catch(e){
-            console.log(e);
+            } catch(e) {
+//            TODO: ALERT TO MALFORMED JSON
         }
     }
 
-    function setIOText(t) {
-        t.val();
+    function setIOText(t, test) {
+        ta = $("#advio");
+        out = JSON.parse(ta.val());
+        if (test){
+            out[t.parent().attr("id")] = t.val();
+            ta.val(JSON.stringify(out));
+        } else {
+        delete out[t.parent().attr("id")];
+        ta.val(JSON.stringify(out));
+
+        }
     }
 
     function setChangesText(t, test, text) {
