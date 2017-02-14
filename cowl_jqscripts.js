@@ -2,8 +2,11 @@ $(document).ready(function() {
     $("legend").click(function() {
         if ($(this).next().css("display") != "none") {
             $(this).siblings().hide();
+            $(this).css("color", "black");
+
         } else {
             $(this).siblings().show();
+            $(this).css("color", "blue");
         }
     });
 
