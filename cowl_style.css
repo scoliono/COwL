@@ -17,30 +17,63 @@
 both of these font faces are taken from playoverwatch.com's homepage.
 TODO: download them and put them in the repo.
 */
+
 body{
-    float: left;
+
+/*    float: left;*/
+
+    font-family: Futura;
+    min-width: 1024px;
+
+}
+div#io {
+    width: 700px;
+}
+div#sidebar {
+    position: fixed;
+    width: 250px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
     font-family: Futura;
 }
-div#stats {
-    width: 1000px;
+div#sidebar > p {
+    text-align: left;
+    font-size: 15px;
 }
+div#settings{
+    width: 60%;
+}
+div#container{
+    min-width: 1024px;
+}
+h1 {
+    font-family: "Big Noodle Too";
+/*WOW HE'S USING THIS FONT!!!! ORIGINAL XDDDDD*/
+}
+
 fieldset {
     border: 0px;
     padding: 2px;
+    padding-left: 0px;
+    width: 60%;
 }
 fieldset > fieldset {
     display: none;
 }
 legend {
-    font-family: "Big Noodle Too";
-    font-size: 36px;
+    font-family: Futura;
+    font-size: 28px;
+    padding-left: 0px;
     cursor: pointer;
 }
 label {
     float: left;
     background-color: rgba(147,151,162,1);
     height: 30px;
-    width: 1000px;
+    min-width: 725px;
+    width: 100%;
+    max-width: 1024px;
     margin: 5px;
     color: white;
     padding: 0 0 0 10px;
@@ -81,10 +114,20 @@ input[type=number] {
     cursor: pointer;
 }
 
-#results {
-    border: red;
-    border-width: 5px;
-    font-family: Futura;
-/*    float: right;
-    position: absolute;*/
+textarea#advio {
+    resize: none;
+    width: 745px;
 }
+#stats {
+    font-size: 18px;
+    font-family: Futura;
+    float: right;
+    border: none;
+    resize: none;
+    position: static;
+    height: 40%;
+    min-width: 250px;
+    width: 35%;
+    display: none;
+}
+

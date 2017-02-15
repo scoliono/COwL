@@ -1,12 +1,23 @@
 $(document).ready(function() {
     $("legend").click(function() {
-        if ($(this).next().css("display") != "none") {
-            $(this).siblings().hide();
-            $(this).css("color", "black");
-
-        } else {
-            $(this).siblings().show();
-            $(this).css("color", "blue");
+        if ($(this).next().find("legend").length != 0 && $(this).parent().attr("id") != "Settings") {
+            if ($(this).next().css("display") != "none") {
+                $(this).siblings().hide();
+                $(this).parent().siblings().show();
+                $(this).css("color", "black");
+                $(this).text($(this).attr("data-text"));
+                pp = $("#title").text().split("/");
+                pp.pop();
+                $("#title").text(pp.join("/"));
+            } else {
+                $(this).parent().siblings().hide();
+                $("#title").show();
+                $("#title").text($("#title").text() + "/" + $(this).text().trim());
+                $(this).siblings().show();
+                $(this).css("color", "darkblue");
+                $(this).attr("data-text", $(this).text());
+                $(this).text("<=Back");
+            }
         }
     });
 
@@ -27,7 +38,7 @@ $(document).ready(function() {
     });
 
 
-    $("input[type='number']").on("mousedown mousemove change", function(e) {
+    $("input[type='number']").on("keyup mousemove change", function(e) {
         if ($(this).val() != $(this).siblings().val()) {
             syncToRange($(this).parent().attr("id"));
             setChangesText($(this), $(this).val() != $(this).attr("data-default"), "Change slider at \"*\" from \"" + $(this).attr("data-default") + "\" to \"*\".");
@@ -35,38 +46,37 @@ $(document).ready(function() {
         }
     });
 
-    $("#advio").change(function(){
+    $("#advio").change(function() {
         getIOText($(this));
     });
 
     function getIOText(ta) {
         try {
             j = JSON.parse(ta.val());
-            for(key in j) {
-                id = "[id='"+ key;
-                if($(id + "']").find("select").length == 1) {
+            for (key in j) {
+                id = "[id='" + key;
+                if ($(id + "']").find("select").length == 1) {
                     $(id + "']").find("select").val(j[key]);
-                } else if($(id + "']").find(id + "-range']").length == 1) {
+                } else if ($(id + "']").find(id + "-range']").length == 1) {
                     $(id + "']").find(id + "-range']").val(j[key]);
                     syncToText(key)
                 }
 
             }
-            } catch(e) {
-//            TODO: ALERT TO MALFORMED JSON
+        } catch (e) {
+            //            TODO: ALERT TO MALFORMED JSON
         }
     }
 
     function setIOText(t, test) {
         ta = $("#advio");
         out = JSON.parse(ta.val());
-        if (test){
+        if (test) {
             out[t.parent().attr("id")] = t.val();
             ta.val(JSON.stringify(out));
         } else {
-        delete out[t.parent().attr("id")];
-        ta.val(JSON.stringify(out));
-
+            delete out[t.parent().attr("id")];
+            ta.val(JSON.stringify(out));
         }
     }
 
@@ -78,7 +88,7 @@ $(document).ready(function() {
             if (document.getElementById(xid) == null) {
                 n = document.createElement("p");
                 n.id = xid;
-                document.getElementById('results').appendChild(n);
+                document.getElementById('sidebar').appendChild(n);
             }
             txtarr = text.split("*");
             $(xxid).text(txtarr[0] + pid.split("-").join(" => ") + txtarr[1] + t.val() + "\".");
