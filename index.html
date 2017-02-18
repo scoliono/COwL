@@ -2,13 +2,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <script src="cowl_scripts.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="cowl_scripts.js"></script>
     <link rel="stylesheet" href="range.css">
     <!--range.css generated at http://danielstern.ca/range.css/-->
     <link rel="stylesheet" href="cowl_style.css">
     <title>Custom Overwatch Lobby Creator</title>
-    <script src="cowl_jqscripts.js"></script>
 </head>
 
 <body>
@@ -18,14 +17,15 @@
         <textarea class="stats" id="stats" readonly></textarea>
         <h2>Changes from Default:</h2>
         <p id="lbbyname"></p>
+        <div id=""></div>
     </div>
     <div class="settings" id="Settings">
         <h1 class="title">Main Menu</h1>
         <p>Gamemode Name: <input type="text" id="name"></p>
         <fieldset id="Settings_Lobby">
-            <legend> Lobby</legend>
+            <legend>Lobby</legend>
             <fieldset id="Settings_Lobby_Map">
-                <legend> Map</legend>
+                <legend>Map</legend>
                 <label id="Settings_Lobby_Map_Map-Rotation">Map Rotation:
                     <select>
                         <option name="def" value="after a mirror match">After a Mirror Match</option>
@@ -44,7 +44,7 @@
                 <br>
             </fieldset>
             <fieldset id="Settings_Lobby_Team">
-                <legend> Team</legend>
+                <legend>Team</legend>
                 <label id="Settings_Lobby_Team_Team-Balancing">Team Balancing:
                     <select>
                         <option name="def" value="off">Off</option>
@@ -77,11 +77,11 @@
             </fieldset>
         </fieldset>
         <fieldset id="Settings_Modes">
-            <legend> Modes</legend>
+            <legend>Modes</legend>
             <fieldset id="Settings_Modes_All">
-                <legend> All</legend>
+                <legend>All</legend>
                 <fieldset id="Settings_Modes_All_General">
-                    <legend> General</legend>
+                    <legend>General</legend>
                     <label id="Settings_Modes_All_General_Enemy-Health-Bars">Enemy Health Bars:
                         <select>
                             <option name="def" value="on">On</option>
@@ -133,7 +133,7 @@
                     <br>
                 </fieldset>
                 <fieldset id="Settings_Modes_All_Heros">
-                    <legend> Heros</legend>
+                    <legend>Heros</legend>
                     <label id="Settings_Modes_All_Heros_Allow-Hero-Switching">Allow Hero Switching:
                         <select>
                             <option name="def" value="on">On</option>
@@ -173,9 +173,9 @@
                 </fieldset>
             </fieldset>
             <fieldset id="Settings_Modes_Assault">
-                <legend> Assault</legend>
+                <legend>Assault</legend>
                 <fieldset id="Settings_Modes_Assault_Assault">
-                    <legend> Assault</legend>
+                    <legend>Assault</legend>
                     <label id="Settings_Modes_Assault_Assault_Enabled">Enabled:
                         <select>
                             <option name="def" value="on">On</option>
@@ -198,9 +198,9 @@
                 </fieldset>
             </fieldset>
             <fieldset id="Settings_Modes_Assault/Escort">
-                <legend> Assault/Escort</legend>
+                <legend>Assault/Escort</legend>
                 <fieldset id="Settings_Modes_Assault/Escort_Assault/Escort">
-                    <legend> Assault/Escort</legend>
+                    <legend>Assault/Escort</legend>
                     <label id="Settings_Modes_Assault/Escort_Assault/Escort_Enabled">Enabled:
                         <select>
                             <option name="def" value="on">On</option>
@@ -228,9 +228,9 @@
                 </fieldset>
             </fieldset>
             <fieldset id="Settings_Modes_Control">
-                <legend> Control</legend>
+                <legend>Control</legend>
                 <fieldset id="Settings_Modes_Control_Control">
-                    <legend> Control</legend>
+                    <legend>Control</legend>
                     <label id="Settings_Modes_Control_Control_Enabled">Enabled:
                         <select>
                             <option name="def" value="on">On</option>
@@ -275,9 +275,9 @@
                 </fieldset>
             </fieldset>
             <fieldset id="Settings_Modes_Escort">
-                <legend> Escort</legend>
+                <legend>Escort</legend>
                 <fieldset id="Settings_Modes_Escort_Escort">
-                    <legend> Escort</legend>
+                    <legend>Escort</legend>
                     <label id="Settings_Modes_Escort_Escort_Enabled">Enabled:
                         <select>
                             <option name="def" value="on">On</option>
@@ -300,9 +300,9 @@
                 </fieldset>
             </fieldset>
             <fieldset id="Settings_Modes_Capture-the-Flag">
-                <legend> Capture the Flag</legend>
+                <legend>Capture the Flag</legend>
                 <fieldset id="Settings_Modes_Capture-the-Flag_Capture-the-Flag">
-                    <legend> Capture the Flag</legend>
+                    <legend>Capture the Flag</legend>
                     <label id="Settings_Modes_Capture-the-Flag_Capture-the-Flag_Enabled">Enabled:
                         <select>
                             <option value="on">On</option>
@@ -355,9 +355,9 @@
                 </fieldset>
             </fieldset>
             <fieldset id="Settings_Modes_Elimination">
-                <legend> Elimination</legend>
+                <legend>Elimination</legend>
                 <fieldset id="Settings_Modes_Elimination_Elimination">
-                    <legend> Elimination</legend>
+                    <legend>Elimination</legend>
                     <label id="Settings_Modes_Elimination_Elimination_Enabled">Enabled:
                         <select>
                             <option value="on">On</option>
@@ -386,9 +386,9 @@
                 </fieldset>
             </fieldset>
             <fieldset id="Settings_Modes_Skirmish">
-                <legend> Skirmish</legend>
+                <legend>Skirmish</legend>
                 <fieldset id="Settings_Modes_Skirmish_Skirmish">
-                    <legend> Skirmish</legend>
+                    <legend>Skirmish</legend>
                     <label id="Settings_Modes_Skirmish_Skirmish_Enabled">Enabled:
                         <select>
                             <option value="on">On</option>
@@ -400,9 +400,9 @@
             </fieldset>
         </fieldset>
         <fieldset id="Settings_Maps">
-            <legend> Maps</legend>
+            <legend>Maps</legend>
             <fieldset id="Settings_Maps_Assault">
-                <legend> Assault</legend>
+                <legend>Assault</legend>
                 <label id="Settings_Maps_Assault_Hanamura">Hanamura:
                     <select>
                         <option name="def" value="on">On</option>
@@ -426,7 +426,7 @@
                 <br>
             </fieldset>
             <fieldset id="Settings_Maps_Assault/Escort">
-                <legend> Assault/Escort</legend>
+                <legend>Assault/Escort</legend>
                 <label id="Settings_Maps_Assault/Escort_Eichenwalde">Eichenwalde:
                     <select>
                         <option name="def" value="on">On</option>
@@ -457,7 +457,7 @@
                 <br>
             </fieldset>
             <fieldset id="Settings_Maps_Control">
-                <legend> Control</legend>
+                <legend>Control</legend>
                 <label id="Settings_Maps_Control_Ilios">Ilios:
                     <select>
                         <option name="def" value="on">On</option>
@@ -488,7 +488,7 @@
                 <br>
             </fieldset>
             <fieldset id="Settings_Maps_Escort">
-                <legend> Escort</legend>
+                <legend>Escort</legend>
                 <label id="Settings_Maps_Escort_Dorado">Dorado:
                     <select>
                         <option name="def" value="on">On</option>
@@ -513,15 +513,15 @@
             </fieldset>
         </fieldset>
         <fieldset id="Settings_Heros">
-            <legend> Heros</legend>
+            <legend>Heros</legend>
             <fieldset id="Settings_Heros_All-Teams">
-                <legend> All Teams</legend>
+                <legend>All Teams</legend>
                 <fieldset id="Settings_Heros_All-Teams_All-Heros">
-                    <legend> All Heros</legend>
+                    <legend>All Heros</legend>
                     <fieldset id="Settings_Heros_All-Teams_All-Heros_General">
-                        <legend> General</legend>
+                        <legend>General</legend>
                         <fieldset id="Settings_Heros_All-Teams_All-Heros_General_Abilities">
-                            <legend> Abilities</legend>
+                            <legend>Abilities</legend>
                             <label for="Settings_Heros_All-Teams_All-Heros_General_Abilities_Ability-Cooldown-Time" id="Settings_Heros_All-Teams_All-Heros_General_Abilities_Ability-Cooldown-Time">Ability Cooldown Time
                                 <input id="Settings_Heros_All-Teams_All-Heros_General_Abilities_Ability-Cooldown-Time-range" type="range" min="0" max="500" value="100" data-default="100">
                                 <input id="Settings_Heros_All-Teams_All-Heros_General_Abilities_Ability-Cooldown-Time-text" type="number" min="0" max="500" value="100" data-default="100">
@@ -541,7 +541,7 @@
                             <br>
                         </fieldset>
                         <fieldset id="Settings_Heros_All-Teams_All-Heros_General_Combat-Modifiers">
-                            <legend> Combat Modifiers</legend>
+                            <legend>Combat Modifiers</legend>
                             <label for="Settings_Heros_All-Teams_All-Heros_General_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_All-Teams_All-Heros_General_Combat-Modifiers_Damage-Dealt">Damage Dealt
                                 <input id="Settings_Heros_All-Teams_All-Heros_General_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                                 <input id="Settings_Heros_All-Teams_All-Heros_General_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -587,7 +587,7 @@
                         </fieldset>
                     </fieldset>
                     <fieldset id="Settings_Heros_All-Teams_All-Heros_Hero-Roster">
-                        <legend> Hero Roster</legend>
+                        <legend>Hero Roster</legend>
                         <label id="Settings_Heros_All-Teams_All-Heros_Hero-Roster_Ana">Ana:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -752,11 +752,11 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_All-Teams_Individual-Heros">
-                    <legend> Individual Heros</legend>
+                    <legend>Individual Heros</legend>
                 <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Ana">
-                    <legend> Ana</legend>
+                    <legend>Ana</legend>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Ana_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_All-Teams_Individual-Heros_Ana_Abilities_Biotic-Grenade">Biotic Grenade:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -795,7 +795,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Ana_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_All-Teams_Individual-Heros_Ana_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_All-Teams_Individual-Heros_Ana_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Ana_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Ana_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -841,9 +841,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Bastion">
-                    <legend> Bastion</legend>
+                    <legend>Bastion</legend>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Bastion_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_All-Teams_Individual-Heros_Bastion_Abilities_Reconfigure">Reconfigure:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -870,7 +870,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Bastion_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_All-Teams_Individual-Heros_Bastion_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_All-Teams_Individual-Heros_Bastion_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Bastion_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Bastion_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -916,9 +916,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_All-Teams_Individual-Heros_D.Va">
-                    <legend> D.Va</legend>
+                    <legend>D.Va</legend>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_D.Va_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_All-Teams_Individual-Heros_D.Va_Abilities_Boosters">Boosters:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -945,7 +945,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_D.Va_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_All-Teams_Individual-Heros_D.Va_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_All-Teams_Individual-Heros_D.Va_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_All-Teams_Individual-Heros_D.Va_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_All-Teams_Individual-Heros_D.Va_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -991,9 +991,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Genji">
-                    <legend> Genji</legend>
+                    <legend>Genji</legend>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Genji_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_All-Teams_Individual-Heros_Genji_Abilities_Deflect">Deflect:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -1032,7 +1032,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Genji_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_All-Teams_Individual-Heros_Genji_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_All-Teams_Individual-Heros_Genji_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Genji_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Genji_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -1078,9 +1078,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Hanzo">
-                    <legend> Hanzo</legend>
+                    <legend>Hanzo</legend>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Hanzo_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_All-Teams_Individual-Heros_Hanzo_Abilities_Scatter-Arrow">Scatter Arrow:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -1119,7 +1119,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Hanzo_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_All-Teams_Individual-Heros_Hanzo_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_All-Teams_Individual-Heros_Hanzo_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Hanzo_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Hanzo_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -1165,9 +1165,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Junkrat">
-                    <legend> Junkrat</legend>
+                    <legend>Junkrat</legend>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Junkrat_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_All-Teams_Individual-Heros_Junkrat_Abilities_Concussion-Mine">Concussion Mine:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -1206,7 +1206,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Junkrat_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_All-Teams_Individual-Heros_Junkrat_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_All-Teams_Individual-Heros_Junkrat_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Junkrat_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Junkrat_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -1252,9 +1252,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Lucio">
-                    <legend> Lucio</legend>
+                    <legend>Lucio</legend>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Lucio_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_All-Teams_Individual-Heros_Lucio_Abilities_Amp-It-Up">Amp It Up:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -1293,7 +1293,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Lucio_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_All-Teams_Individual-Heros_Lucio_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_All-Teams_Individual-Heros_Lucio_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Lucio_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Lucio_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -1339,9 +1339,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_All-Teams_Individual-Heros_McCree">
-                    <legend> McCree</legend>
+                    <legend>McCree</legend>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_McCree_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_All-Teams_Individual-Heros_McCree_Abilities_Combat-Roll">Combat Roll:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -1380,7 +1380,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_McCree_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_All-Teams_Individual-Heros_McCree_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_All-Teams_Individual-Heros_McCree_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_All-Teams_Individual-Heros_McCree_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_All-Teams_Individual-Heros_McCree_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -1426,9 +1426,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Mei">
-                    <legend> Mei</legend>
+                    <legend>Mei</legend>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Mei_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_All-Teams_Individual-Heros_Mei_Abilities_Cryo-Freeze">Cryo-Freeze:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -1467,7 +1467,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Mei_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_All-Teams_Individual-Heros_Mei_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_All-Teams_Individual-Heros_Mei_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Mei_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Mei_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -1513,9 +1513,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Mercy">
-                    <legend> Mercy</legend>
+                    <legend>Mercy</legend>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Mercy_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_All-Teams_Individual-Heros_Mercy_Abilities_Guardian-Angel">Guardian Angel:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -1542,7 +1542,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Mercy_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_All-Teams_Individual-Heros_Mercy_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_All-Teams_Individual-Heros_Mercy_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Mercy_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Mercy_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -1588,9 +1588,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Pharah">
-                    <legend> Pharah</legend>
+                    <legend>Pharah</legend>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Pharah_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_All-Teams_Individual-Heros_Pharah_Abilities_Concussive-Blast">Concussive Blast:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -1629,7 +1629,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Pharah_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_All-Teams_Individual-Heros_Pharah_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_All-Teams_Individual-Heros_Pharah_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Pharah_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Pharah_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -1675,9 +1675,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Reaper">
-                    <legend> Reaper</legend>
+                    <legend>Reaper</legend>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Reaper_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_All-Teams_Individual-Heros_Reaper_Abilities_Shadow-Step">Shadow Step:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -1716,7 +1716,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Reaper_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_All-Teams_Individual-Heros_Reaper_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_All-Teams_Individual-Heros_Reaper_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Reaper_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Reaper_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -1762,9 +1762,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Reinhardt">
-                    <legend> Reinhardt</legend>
+                    <legend>Reinhardt</legend>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Reinhardt_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_All-Teams_Individual-Heros_Reinhardt_Abilities_Charge">Charge:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -1803,7 +1803,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Reinhardt_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_All-Teams_Individual-Heros_Reinhardt_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_All-Teams_Individual-Heros_Reinhardt_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Reinhardt_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Reinhardt_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -1849,9 +1849,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Roadhog">
-                    <legend> Roadhog</legend>
+                    <legend>Roadhog</legend>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Roadhog_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_All-Teams_Individual-Heros_Roadhog_Abilities_Chain-Hook">Chain Hook:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -1890,7 +1890,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Roadhog_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_All-Teams_Individual-Heros_Roadhog_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_All-Teams_Individual-Heros_Roadhog_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Roadhog_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Roadhog_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -1936,9 +1936,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Soldier:76">
-                    <legend> Soldier:76</legend>
+                    <legend>Soldier:76</legend>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Soldier:76_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_All-Teams_Individual-Heros_Soldier:76_Abilities_Biotic-Field">Biotic Field:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -1977,7 +1977,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Soldier:76_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_All-Teams_Individual-Heros_Soldier:76_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_All-Teams_Individual-Heros_Soldier:76_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Soldier:76_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Soldier:76_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -2023,9 +2023,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Sombra">
-                    <legend> Sombra</legend>
+                    <legend>Sombra</legend>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Sombra_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_All-Teams_Individual-Heros_Sombra_Abilities_Stealth">Stealth:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -2064,7 +2064,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Sombra_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_All-Teams_Individual-Heros_Sombra_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_All-Teams_Individual-Heros_Sombra_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Sombra_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Sombra_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -2110,9 +2110,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Symmetra">
-                    <legend> Symmetra</legend>
+                    <legend>Symmetra</legend>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Symmetra_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_All-Teams_Individual-Heros_Symmetra_Abilities_Photon-Barrier">Photon Barrier:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -2151,7 +2151,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Symmetra_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_All-Teams_Individual-Heros_Symmetra_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_All-Teams_Individual-Heros_Symmetra_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Symmetra_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Symmetra_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -2197,9 +2197,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Torbjorn">
-                    <legend> Torbjorn</legend>
+                    <legend>Torbjorn</legend>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Torbjorn_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_All-Teams_Individual-Heros_Torbjorn_Abilities_Armor-Pack">Armor Pack:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -2238,7 +2238,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Torbjorn_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_All-Teams_Individual-Heros_Torbjorn_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_All-Teams_Individual-Heros_Torbjorn_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Torbjorn_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Torbjorn_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -2284,9 +2284,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Tracer">
-                    <legend> Tracer</legend>
+                    <legend>Tracer</legend>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Tracer_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_All-Teams_Individual-Heros_Tracer_Abilities_Blink">Blink:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -2325,7 +2325,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Tracer_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_All-Teams_Individual-Heros_Tracer_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_All-Teams_Individual-Heros_Tracer_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Tracer_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Tracer_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -2371,9 +2371,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Widowmaker">
-                    <legend> Widowmaker</legend>
+                    <legend>Widowmaker</legend>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Widowmaker_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_All-Teams_Individual-Heros_Widowmaker_Abilities_Grappling-Hook">Grappling Hook:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -2412,7 +2412,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Widowmaker_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_All-Teams_Individual-Heros_Widowmaker_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_All-Teams_Individual-Heros_Widowmaker_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Widowmaker_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Widowmaker_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -2458,9 +2458,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Winston">
-                    <legend> Winston</legend>
+                    <legend>Winston</legend>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Winston_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_All-Teams_Individual-Heros_Winston_Abilities_Barrier-Projector">Barrier Projector:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -2499,7 +2499,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Winston_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_All-Teams_Individual-Heros_Winston_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_All-Teams_Individual-Heros_Winston_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Winston_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Winston_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -2545,9 +2545,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Zarya">
-                    <legend> Zarya</legend>
+                    <legend>Zarya</legend>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Zarya_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_All-Teams_Individual-Heros_Zarya_Abilities_Particle-Barrier">Particle Barrier:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -2586,7 +2586,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Zarya_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_All-Teams_Individual-Heros_Zarya_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_All-Teams_Individual-Heros_Zarya_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Zarya_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Zarya_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -2632,9 +2632,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Zenyatta">
-                    <legend> Zenyatta</legend>
+                    <legend>Zenyatta</legend>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Zenyatta_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_All-Teams_Individual-Heros_Zenyatta_Abilities_Orb-of-Discord">Orb of Discord:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -2673,7 +2673,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_All-Teams_Individual-Heros_Zenyatta_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_All-Teams_Individual-Heros_Zenyatta_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_All-Teams_Individual-Heros_Zenyatta_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Zenyatta_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_All-Teams_Individual-Heros_Zenyatta_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -2721,13 +2721,13 @@
                 </fieldset>
             </fieldset>
             <fieldset id="Settings_Heros_Team-1">
-                <legend> Team 1</legend>
+                <legend>Team 1</legend>
                 <fieldset id="Settings_Heros_Team-1_All-Heros">
-                    <legend> All Heros</legend>
+                    <legend>All Heros</legend>
                     <fieldset id="Settings_Heros_Team-1_All-Heros_General">
-                        <legend> General</legend>
+                        <legend>General</legend>
                         <fieldset id="Settings_Heros_Team-1_All-Heros_General_Abilities">
-                            <legend> Abilities</legend>
+                            <legend>Abilities</legend>
                             <label for="Settings_Heros_Team-1_All-Heros_General_Abilities_Ability-Cooldown-Time" id="Settings_Heros_Team-1_All-Heros_General_Abilities_Ability-Cooldown-Time">Ability Cooldown Time
                                 <input id="Settings_Heros_Team-1_All-Heros_General_Abilities_Ability-Cooldown-Time-range" type="range" min="0" max="500" value="100" data-default="100">
                                 <input id="Settings_Heros_Team-1_All-Heros_General_Abilities_Ability-Cooldown-Time-text" type="number" min="0" max="500" value="100" data-default="100">
@@ -2747,7 +2747,7 @@
                             <br>
                         </fieldset>
                         <fieldset id="Settings_Heros_Team-1_All-Heros_General_Combat-Modifiers">
-                            <legend> Combat Modifiers</legend>
+                            <legend>Combat Modifiers</legend>
                             <label for="Settings_Heros_Team-1_All-Heros_General_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-1_All-Heros_General_Combat-Modifiers_Damage-Dealt">Damage Dealt
                                 <input id="Settings_Heros_Team-1_All-Heros_General_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                                 <input id="Settings_Heros_Team-1_All-Heros_General_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -2793,7 +2793,7 @@
                         </fieldset>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-1_All-Heros_Hero-Roster">
-                        <legend> Hero Roster</legend>
+                        <legend>Hero Roster</legend>
                         <label id="Settings_Heros_Team-1_All-Heros_Hero-Roster_Ana">Ana:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -2958,11 +2958,11 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-1_Individual-Heros">
-                    <legend> Individual Heros</legend>
+                    <legend>Individual Heros</legend>
                 <fieldset id="Settings_Heros_Team-1_Individual-Heros_Ana">
-                    <legend> Ana</legend>
+                    <legend>Ana</legend>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Ana_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-1_Individual-Heros_Ana_Abilities_Biotic-Grenade">Biotic Grenade:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -3001,7 +3001,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Ana_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-1_Individual-Heros_Ana_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-1_Individual-Heros_Ana_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-1_Individual-Heros_Ana_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-1_Individual-Heros_Ana_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -3047,9 +3047,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-1_Individual-Heros_Bastion">
-                    <legend> Bastion</legend>
+                    <legend>Bastion</legend>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Bastion_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-1_Individual-Heros_Bastion_Abilities_Reconfigure">Reconfigure:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -3076,7 +3076,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Bastion_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-1_Individual-Heros_Bastion_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-1_Individual-Heros_Bastion_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-1_Individual-Heros_Bastion_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-1_Individual-Heros_Bastion_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -3122,9 +3122,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-1_Individual-Heros_D.Va">
-                    <legend> D.Va</legend>
+                    <legend>D.Va</legend>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_D.Va_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-1_Individual-Heros_D.Va_Abilities_Boosters">Boosters:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -3151,7 +3151,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_D.Va_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-1_Individual-Heros_D.Va_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-1_Individual-Heros_D.Va_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-1_Individual-Heros_D.Va_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-1_Individual-Heros_D.Va_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -3197,9 +3197,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-1_Individual-Heros_Genji">
-                    <legend> Genji</legend>
+                    <legend>Genji</legend>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Genji_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-1_Individual-Heros_Genji_Abilities_Deflect">Deflect:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -3238,7 +3238,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Genji_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-1_Individual-Heros_Genji_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-1_Individual-Heros_Genji_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-1_Individual-Heros_Genji_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-1_Individual-Heros_Genji_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -3284,9 +3284,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-1_Individual-Heros_Hanzo">
-                    <legend> Hanzo</legend>
+                    <legend>Hanzo</legend>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Hanzo_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-1_Individual-Heros_Hanzo_Abilities_Scatter-Arrow">Scatter Arrow:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -3325,7 +3325,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Hanzo_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-1_Individual-Heros_Hanzo_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-1_Individual-Heros_Hanzo_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-1_Individual-Heros_Hanzo_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-1_Individual-Heros_Hanzo_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -3371,9 +3371,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-1_Individual-Heros_Junkrat">
-                    <legend> Junkrat</legend>
+                    <legend>Junkrat</legend>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Junkrat_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-1_Individual-Heros_Junkrat_Abilities_Concussion-Mine">Concussion Mine:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -3412,7 +3412,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Junkrat_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-1_Individual-Heros_Junkrat_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-1_Individual-Heros_Junkrat_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-1_Individual-Heros_Junkrat_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-1_Individual-Heros_Junkrat_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -3458,9 +3458,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-1_Individual-Heros_Lucio">
-                    <legend> Lucio</legend>
+                    <legend>Lucio</legend>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Lucio_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-1_Individual-Heros_Lucio_Abilities_Amp-It-Up">Amp It Up:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -3499,7 +3499,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Lucio_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-1_Individual-Heros_Lucio_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-1_Individual-Heros_Lucio_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-1_Individual-Heros_Lucio_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-1_Individual-Heros_Lucio_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -3545,9 +3545,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-1_Individual-Heros_McCree">
-                    <legend> McCree</legend>
+                    <legend>McCree</legend>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_McCree_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-1_Individual-Heros_McCree_Abilities_Combat-Roll">Combat Roll:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -3586,7 +3586,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_McCree_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-1_Individual-Heros_McCree_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-1_Individual-Heros_McCree_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-1_Individual-Heros_McCree_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-1_Individual-Heros_McCree_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -3632,9 +3632,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-1_Individual-Heros_Mei">
-                    <legend> Mei</legend>
+                    <legend>Mei</legend>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Mei_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-1_Individual-Heros_Mei_Abilities_Cryo-Freeze">Cryo-Freeze:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -3673,7 +3673,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Mei_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-1_Individual-Heros_Mei_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-1_Individual-Heros_Mei_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-1_Individual-Heros_Mei_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-1_Individual-Heros_Mei_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -3719,9 +3719,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-1_Individual-Heros_Mercy">
-                    <legend> Mercy</legend>
+                    <legend>Mercy</legend>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Mercy_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-1_Individual-Heros_Mercy_Abilities_Guardian-Angel">Guardian Angel:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -3748,7 +3748,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Mercy_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-1_Individual-Heros_Mercy_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-1_Individual-Heros_Mercy_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-1_Individual-Heros_Mercy_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-1_Individual-Heros_Mercy_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -3794,9 +3794,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-1_Individual-Heros_Pharah">
-                    <legend> Pharah</legend>
+                    <legend>Pharah</legend>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Pharah_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-1_Individual-Heros_Pharah_Abilities_Concussive-Blast">Concussive Blast:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -3835,7 +3835,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Pharah_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-1_Individual-Heros_Pharah_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-1_Individual-Heros_Pharah_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-1_Individual-Heros_Pharah_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-1_Individual-Heros_Pharah_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -3881,9 +3881,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-1_Individual-Heros_Reaper">
-                    <legend> Reaper</legend>
+                    <legend>Reaper</legend>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Reaper_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-1_Individual-Heros_Reaper_Abilities_Shadow-Step">Shadow Step:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -3922,7 +3922,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Reaper_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-1_Individual-Heros_Reaper_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-1_Individual-Heros_Reaper_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-1_Individual-Heros_Reaper_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-1_Individual-Heros_Reaper_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -3968,9 +3968,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-1_Individual-Heros_Reinhardt">
-                    <legend> Reinhardt</legend>
+                    <legend>Reinhardt</legend>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Reinhardt_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-1_Individual-Heros_Reinhardt_Abilities_Charge">Charge:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -4009,7 +4009,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Reinhardt_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-1_Individual-Heros_Reinhardt_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-1_Individual-Heros_Reinhardt_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-1_Individual-Heros_Reinhardt_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-1_Individual-Heros_Reinhardt_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -4055,9 +4055,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-1_Individual-Heros_Roadhog">
-                    <legend> Roadhog</legend>
+                    <legend>Roadhog</legend>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Roadhog_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-1_Individual-Heros_Roadhog_Abilities_Chain-Hook">Chain Hook:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -4096,7 +4096,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Roadhog_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-1_Individual-Heros_Roadhog_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-1_Individual-Heros_Roadhog_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-1_Individual-Heros_Roadhog_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-1_Individual-Heros_Roadhog_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -4142,9 +4142,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-1_Individual-Heros_Soldier:76">
-                    <legend> Soldier:76</legend>
+                    <legend>Soldier:76</legend>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Soldier:76_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-1_Individual-Heros_Soldier:76_Abilities_Biotic-Field">Biotic Field:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -4183,7 +4183,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Soldier:76_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-1_Individual-Heros_Soldier:76_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-1_Individual-Heros_Soldier:76_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-1_Individual-Heros_Soldier:76_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-1_Individual-Heros_Soldier:76_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -4229,9 +4229,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-1_Individual-Heros_Sombra">
-                    <legend> Sombra</legend>
+                    <legend>Sombra</legend>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Sombra_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-1_Individual-Heros_Sombra_Abilities_Stealth">Stealth:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -4270,7 +4270,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Sombra_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-1_Individual-Heros_Sombra_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-1_Individual-Heros_Sombra_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-1_Individual-Heros_Sombra_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-1_Individual-Heros_Sombra_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -4316,9 +4316,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-1_Individual-Heros_Symmetra">
-                    <legend> Symmetra</legend>
+                    <legend>Symmetra</legend>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Symmetra_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-1_Individual-Heros_Symmetra_Abilities_Photon-Barrier">Photon Barrier:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -4357,7 +4357,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Symmetra_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-1_Individual-Heros_Symmetra_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-1_Individual-Heros_Symmetra_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-1_Individual-Heros_Symmetra_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-1_Individual-Heros_Symmetra_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -4403,9 +4403,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-1_Individual-Heros_Torbjorn">
-                    <legend> Torbjorn</legend>
+                    <legend>Torbjorn</legend>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Torbjorn_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-1_Individual-Heros_Torbjorn_Abilities_Armor-Pack">Armor Pack:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -4444,7 +4444,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Torbjorn_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-1_Individual-Heros_Torbjorn_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-1_Individual-Heros_Torbjorn_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-1_Individual-Heros_Torbjorn_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-1_Individual-Heros_Torbjorn_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -4490,9 +4490,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-1_Individual-Heros_Tracer">
-                    <legend> Tracer</legend>
+                    <legend>Tracer</legend>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Tracer_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-1_Individual-Heros_Tracer_Abilities_Blink">Blink:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -4531,7 +4531,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Tracer_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-1_Individual-Heros_Tracer_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-1_Individual-Heros_Tracer_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-1_Individual-Heros_Tracer_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-1_Individual-Heros_Tracer_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -4577,9 +4577,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-1_Individual-Heros_Widowmaker">
-                    <legend> Widowmaker</legend>
+                    <legend>Widowmaker</legend>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Widowmaker_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-1_Individual-Heros_Widowmaker_Abilities_Grappling-Hook">Grappling Hook:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -4618,7 +4618,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Widowmaker_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-1_Individual-Heros_Widowmaker_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-1_Individual-Heros_Widowmaker_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-1_Individual-Heros_Widowmaker_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-1_Individual-Heros_Widowmaker_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -4664,9 +4664,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-1_Individual-Heros_Winston">
-                    <legend> Winston</legend>
+                    <legend>Winston</legend>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Winston_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-1_Individual-Heros_Winston_Abilities_Barrier-Projector">Barrier Projector:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -4705,7 +4705,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Winston_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-1_Individual-Heros_Winston_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-1_Individual-Heros_Winston_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-1_Individual-Heros_Winston_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-1_Individual-Heros_Winston_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -4751,9 +4751,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-1_Individual-Heros_Zarya">
-                    <legend> Zarya</legend>
+                    <legend>Zarya</legend>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Zarya_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-1_Individual-Heros_Zarya_Abilities_Particle-Barrier">Particle Barrier:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -4792,7 +4792,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Zarya_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-1_Individual-Heros_Zarya_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-1_Individual-Heros_Zarya_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-1_Individual-Heros_Zarya_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-1_Individual-Heros_Zarya_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -4838,9 +4838,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-1_Individual-Heros_Zenyatta">
-                    <legend> Zenyatta</legend>
+                    <legend>Zenyatta</legend>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Zenyatta_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-1_Individual-Heros_Zenyatta_Abilities_Orb-of-Discord">Orb of Discord:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -4879,7 +4879,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-1_Individual-Heros_Zenyatta_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-1_Individual-Heros_Zenyatta_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-1_Individual-Heros_Zenyatta_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-1_Individual-Heros_Zenyatta_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-1_Individual-Heros_Zenyatta_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -4927,13 +4927,13 @@
             </fieldset>
             </fieldset>
             <fieldset id="Settings_Heros_Team-2">
-                <legend> Team 2</legend>
+                <legend>Team 2</legend>
                 <fieldset id="Settings_Heros_Team-2_All-Heros">
-                    <legend> All Heros</legend>
+                    <legend>All Heros</legend>
                     <fieldset id="Settings_Heros_Team-2_All-Heros_General">
-                        <legend> General</legend>
+                        <legend>General</legend>
                         <fieldset id="Settings_Heros_Team-2_All-Heros_General_Abilities">
-                            <legend> Abilities</legend>
+                            <legend>Abilities</legend>
                             <label for="Settings_Heros_Team-2_All-Heros_General_Abilities_Ability-Cooldown-Time" id="Settings_Heros_Team-2_All-Heros_General_Abilities_Ability-Cooldown-Time">Ability Cooldown Time
                                 <input id="Settings_Heros_Team-2_All-Heros_General_Abilities_Ability-Cooldown-Time-range" type="range" min="0" max="500" value="100" data-default="100">
                                 <input id="Settings_Heros_Team-2_All-Heros_General_Abilities_Ability-Cooldown-Time-text" type="number" min="0" max="500" value="100" data-default="100">
@@ -4953,7 +4953,7 @@
                             <br>
                         </fieldset>
                         <fieldset id="Settings_Heros_Team-2_All-Heros_General_Combat-Modifiers">
-                            <legend> Combat Modifiers</legend>
+                            <legend>Combat Modifiers</legend>
                             <label for="Settings_Heros_Team-2_All-Heros_General_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-2_All-Heros_General_Combat-Modifiers_Damage-Dealt">Damage Dealt
                                 <input id="Settings_Heros_Team-2_All-Heros_General_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                                 <input id="Settings_Heros_Team-2_All-Heros_General_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -4999,7 +4999,7 @@
                         </fieldset>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-2_All-Heros_Hero-Roster">
-                        <legend> Hero Roster</legend>
+                        <legend>Hero Roster</legend>
                         <label id="Settings_Heros_Team-2_All-Heros_Hero-Roster_Ana">Ana:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -5164,11 +5164,11 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-2_Individual-Heros">
-                    <legend> Individual Heros</legend>
+                    <legend>Individual Heros</legend>
                 <fieldset id="Settings_Heros_Team-2_Individual-Heros_Ana">
-                    <legend> Ana</legend>
+                    <legend>Ana</legend>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Ana_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-2_Individual-Heros_Ana_Abilities_Biotic-Grenade">Biotic Grenade:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -5207,7 +5207,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Ana_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-2_Individual-Heros_Ana_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-2_Individual-Heros_Ana_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-2_Individual-Heros_Ana_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-2_Individual-Heros_Ana_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -5253,9 +5253,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-2_Individual-Heros_Bastion">
-                    <legend> Bastion</legend>
+                    <legend>Bastion</legend>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Bastion_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-2_Individual-Heros_Bastion_Abilities_Reconfigure">Reconfigure:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -5282,7 +5282,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Bastion_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-2_Individual-Heros_Bastion_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-2_Individual-Heros_Bastion_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-2_Individual-Heros_Bastion_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-2_Individual-Heros_Bastion_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -5328,9 +5328,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-2_Individual-Heros_D.Va">
-                    <legend> D.Va</legend>
+                    <legend>D.Va</legend>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_D.Va_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-2_Individual-Heros_D.Va_Abilities_Boosters">Boosters:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -5357,7 +5357,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_D.Va_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-2_Individual-Heros_D.Va_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-2_Individual-Heros_D.Va_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-2_Individual-Heros_D.Va_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-2_Individual-Heros_D.Va_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -5403,9 +5403,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-2_Individual-Heros_Genji">
-                    <legend> Genji</legend>
+                    <legend>Genji</legend>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Genji_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-2_Individual-Heros_Genji_Abilities_Deflect">Deflect:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -5444,7 +5444,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Genji_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-2_Individual-Heros_Genji_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-2_Individual-Heros_Genji_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-2_Individual-Heros_Genji_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-2_Individual-Heros_Genji_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -5490,9 +5490,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-2_Individual-Heros_Hanzo">
-                    <legend> Hanzo</legend>
+                    <legend>Hanzo</legend>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Hanzo_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-2_Individual-Heros_Hanzo_Abilities_Scatter-Arrow">Scatter Arrow:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -5531,7 +5531,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Hanzo_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-2_Individual-Heros_Hanzo_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-2_Individual-Heros_Hanzo_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-2_Individual-Heros_Hanzo_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-2_Individual-Heros_Hanzo_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -5577,9 +5577,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-2_Individual-Heros_Junkrat">
-                    <legend> Junkrat</legend>
+                    <legend>Junkrat</legend>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Junkrat_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-2_Individual-Heros_Junkrat_Abilities_Concussion-Mine">Concussion Mine:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -5618,7 +5618,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Junkrat_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-2_Individual-Heros_Junkrat_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-2_Individual-Heros_Junkrat_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-2_Individual-Heros_Junkrat_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-2_Individual-Heros_Junkrat_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -5664,9 +5664,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-2_Individual-Heros_Lucio">
-                    <legend> Lucio</legend>
+                    <legend>Lucio</legend>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Lucio_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-2_Individual-Heros_Lucio_Abilities_Amp-It-Up">Amp It Up:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -5705,7 +5705,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Lucio_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-2_Individual-Heros_Lucio_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-2_Individual-Heros_Lucio_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-2_Individual-Heros_Lucio_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-2_Individual-Heros_Lucio_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -5751,9 +5751,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-2_Individual-Heros_McCree">
-                    <legend> McCree</legend>
+                    <legend>McCree</legend>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_McCree_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-2_Individual-Heros_McCree_Abilities_Combat-Roll">Combat Roll:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -5792,7 +5792,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_McCree_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-2_Individual-Heros_McCree_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-2_Individual-Heros_McCree_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-2_Individual-Heros_McCree_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-2_Individual-Heros_McCree_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -5838,9 +5838,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-2_Individual-Heros_Mei">
-                    <legend> Mei</legend>
+                    <legend>Mei</legend>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Mei_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-2_Individual-Heros_Mei_Abilities_Cryo-Freeze">Cryo-Freeze:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -5879,7 +5879,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Mei_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-2_Individual-Heros_Mei_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-2_Individual-Heros_Mei_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-2_Individual-Heros_Mei_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-2_Individual-Heros_Mei_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -5925,9 +5925,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-2_Individual-Heros_Mercy">
-                    <legend> Mercy</legend>
+                    <legend>Mercy</legend>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Mercy_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-2_Individual-Heros_Mercy_Abilities_Guardian-Angel">Guardian Angel:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -5954,7 +5954,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Mercy_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-2_Individual-Heros_Mercy_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-2_Individual-Heros_Mercy_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-2_Individual-Heros_Mercy_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-2_Individual-Heros_Mercy_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -6000,9 +6000,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-2_Individual-Heros_Pharah">
-                    <legend> Pharah</legend>
+                    <legend>Pharah</legend>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Pharah_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-2_Individual-Heros_Pharah_Abilities_Concussive-Blast">Concussive Blast:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -6041,7 +6041,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Pharah_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-2_Individual-Heros_Pharah_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-2_Individual-Heros_Pharah_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-2_Individual-Heros_Pharah_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-2_Individual-Heros_Pharah_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -6087,9 +6087,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-2_Individual-Heros_Reaper">
-                    <legend> Reaper</legend>
+                    <legend>Reaper</legend>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Reaper_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-2_Individual-Heros_Reaper_Abilities_Shadow-Step">Shadow Step:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -6128,7 +6128,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Reaper_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-2_Individual-Heros_Reaper_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-2_Individual-Heros_Reaper_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-2_Individual-Heros_Reaper_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-2_Individual-Heros_Reaper_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -6174,9 +6174,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-2_Individual-Heros_Reinhardt">
-                    <legend> Reinhardt</legend>
+                    <legend>Reinhardt</legend>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Reinhardt_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-2_Individual-Heros_Reinhardt_Abilities_Charge">Charge:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -6215,7 +6215,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Reinhardt_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-2_Individual-Heros_Reinhardt_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-2_Individual-Heros_Reinhardt_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-2_Individual-Heros_Reinhardt_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-2_Individual-Heros_Reinhardt_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -6261,9 +6261,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-2_Individual-Heros_Roadhog">
-                    <legend> Roadhog</legend>
+                    <legend>Roadhog</legend>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Roadhog_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-2_Individual-Heros_Roadhog_Abilities_Chain-Hook">Chain Hook:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -6302,7 +6302,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Roadhog_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-2_Individual-Heros_Roadhog_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-2_Individual-Heros_Roadhog_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-2_Individual-Heros_Roadhog_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-2_Individual-Heros_Roadhog_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -6348,9 +6348,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-2_Individual-Heros_Soldier:76">
-                    <legend> Soldier:76</legend>
+                    <legend>Soldier:76</legend>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Soldier:76_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-2_Individual-Heros_Soldier:76_Abilities_Biotic-Field">Biotic Field:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -6389,7 +6389,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Soldier:76_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-2_Individual-Heros_Soldier:76_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-2_Individual-Heros_Soldier:76_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-2_Individual-Heros_Soldier:76_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-2_Individual-Heros_Soldier:76_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -6435,9 +6435,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-2_Individual-Heros_Sombra">
-                    <legend> Sombra</legend>
+                    <legend>Sombra</legend>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Sombra_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-2_Individual-Heros_Sombra_Abilities_Stealth">Stealth:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -6476,7 +6476,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Sombra_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-2_Individual-Heros_Sombra_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-2_Individual-Heros_Sombra_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-2_Individual-Heros_Sombra_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-2_Individual-Heros_Sombra_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -6522,9 +6522,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-2_Individual-Heros_Symmetra">
-                    <legend> Symmetra</legend>
+                    <legend>Symmetra</legend>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Symmetra_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-2_Individual-Heros_Symmetra_Abilities_Photon-Barrier">Photon Barrier:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -6563,7 +6563,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Symmetra_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-2_Individual-Heros_Symmetra_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-2_Individual-Heros_Symmetra_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-2_Individual-Heros_Symmetra_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-2_Individual-Heros_Symmetra_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -6609,9 +6609,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-2_Individual-Heros_Torbjorn">
-                    <legend> Torbjorn</legend>
+                    <legend>Torbjorn</legend>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Torbjorn_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-2_Individual-Heros_Torbjorn_Abilities_Armor-Pack">Armor Pack:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -6650,7 +6650,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Torbjorn_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-2_Individual-Heros_Torbjorn_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-2_Individual-Heros_Torbjorn_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-2_Individual-Heros_Torbjorn_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-2_Individual-Heros_Torbjorn_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -6696,9 +6696,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-2_Individual-Heros_Tracer">
-                    <legend> Tracer</legend>
+                    <legend>Tracer</legend>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Tracer_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-2_Individual-Heros_Tracer_Abilities_Blink">Blink:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -6737,7 +6737,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Tracer_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-2_Individual-Heros_Tracer_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-2_Individual-Heros_Tracer_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-2_Individual-Heros_Tracer_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-2_Individual-Heros_Tracer_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -6783,9 +6783,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-2_Individual-Heros_Widowmaker">
-                    <legend> Widowmaker</legend>
+                    <legend>Widowmaker</legend>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Widowmaker_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-2_Individual-Heros_Widowmaker_Abilities_Grappling-Hook">Grappling Hook:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -6824,7 +6824,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Widowmaker_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-2_Individual-Heros_Widowmaker_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-2_Individual-Heros_Widowmaker_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-2_Individual-Heros_Widowmaker_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-2_Individual-Heros_Widowmaker_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -6870,9 +6870,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-2_Individual-Heros_Winston">
-                    <legend> Winston</legend>
+                    <legend>Winston</legend>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Winston_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-2_Individual-Heros_Winston_Abilities_Barrier-Projector">Barrier Projector:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -6911,7 +6911,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Winston_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-2_Individual-Heros_Winston_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-2_Individual-Heros_Winston_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-2_Individual-Heros_Winston_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-2_Individual-Heros_Winston_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -6957,9 +6957,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-2_Individual-Heros_Zarya">
-                    <legend> Zarya</legend>
+                    <legend>Zarya</legend>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Zarya_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-2_Individual-Heros_Zarya_Abilities_Particle-Barrier">Particle Barrier:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -6998,7 +6998,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Zarya_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-2_Individual-Heros_Zarya_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-2_Individual-Heros_Zarya_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-2_Individual-Heros_Zarya_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-2_Individual-Heros_Zarya_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
@@ -7044,9 +7044,9 @@
                     </fieldset>
                 </fieldset>
                 <fieldset id="Settings_Heros_Team-2_Individual-Heros_Zenyatta">
-                    <legend> Zenyatta</legend>
+                    <legend>Zenyatta</legend>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Zenyatta_Abilities">
-                        <legend> Abilities</legend>
+                        <legend>Abilities</legend>
                         <label id="Settings_Heros_Team-2_Individual-Heros_Zenyatta_Abilities_Orb-of-Discord">Orb of Discord:
                             <select>
                                 <option name="def" value="on">On</option>
@@ -7085,7 +7085,7 @@
                         <br>
                     </fieldset>
                     <fieldset id="Settings_Heros_Team-2_Individual-Heros_Zenyatta_Combat-Modifiers">
-                        <legend> Combat Modifiers</legend>
+                        <legend>Combat Modifiers</legend>
                         <label for="Settings_Heros_Team-2_Individual-Heros_Zenyatta_Combat-Modifiers_Damage-Dealt" id="Settings_Heros_Team-2_Individual-Heros_Zenyatta_Combat-Modifiers_Damage-Dealt">Damage Dealt
                             <input id="Settings_Heros_Team-2_Individual-Heros_Zenyatta_Combat-Modifiers_Damage-Dealt-range" type="range" min="10" max="500" value="100" data-default="100">
                             <input id="Settings_Heros_Team-2_Individual-Heros_Zenyatta_Combat-Modifiers_Damage-Dealt-text" type="number" min="10" max="500" value="100" data-default="100">
