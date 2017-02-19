@@ -14,7 +14,6 @@ $(function() {
     });
 
     $("fieldset#Settings_Heros > * > * > * > legend").click(function() {
-//    This is to select only non-Heros traversal legends, not the option-containing legends
         if ($(this).text() == "<=Back") {
             pp = $(".title").text().split("/");
             pp.pop();
@@ -49,31 +48,27 @@ $(function() {
         } else {
             $(".title").text($(".title").text() + "/" + $(this).text().trim());
             levelDownHeros($(this));
-            $(this).text("<=Back")
+            $(this).text("<=Back");
         }
     });
 
     $("select:not(.switcher)").change(function() {
-            console.log("??");
             var odef = $(this).find("option[name='def']").text();
             var cval = $(this).find(":selected").text();
-            console.log(odef);
-            console.log(cval);
             setChangesText($(this), cval !== odef, "Change dropdown at \"*\" from \"" + odef + "\" to \"*\"");
             setIOText($(this), cval !== odef, $(this).parent().attr("id"));
     });
 
     $(".switcher").change(function() {
         var idarr;
-        var p = $("#Settings fieldset:visible");
+        var p = $("#Settings_Heros fieldset:visible");
         p.each(function(i,e){
             if ($(this).attr("id").search("Team") !== -1) {
-                console.log($(".switcher").val())
                 var tempid = "#" + $(this).attr("id").replace(/All-Teams|Team-1|Team-2/, $(".switcher").val());
-                console.log(tempid)
                 $(tempid).show();
-                console.log($(this))
-                $(this).hide()
+                $(tempid).parent().children("legend:not(:contains(<=Back))").attr("data-text", $(document.getElementById(tempid)).parent().children("legend:not(:contains(<=Back))").text());
+                $(tempid).parent().children("legend:not(:contains(<=Back))").text("<=Back");
+                $(this).hide();
             }
         });
     });
@@ -184,7 +179,6 @@ $(function() {
             var xid = pid.split("_").join("-");
             var xxid = "#" + xid;
             var main = $(document.getElementById(pid.replace(/Team\-\d/g, "All-Teams")).children);
-            console.log(main.val());
             if ((test && !(t.parent().attr("id").search("All-Teams") === -1)) || ((t.val() !== main.val()))) {
                 if (document.getElementById(xid) === null) {
                     $("div.sidebar").append("<p id=\"" + xid + "\">");
