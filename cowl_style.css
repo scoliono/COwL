@@ -81,7 +81,7 @@ label {
 }
 
 select {
-    background-color: rgba(39,169,227,.5);
+    background-color: rgba(39,169,227,.75);
     padding: 5px 0 0 0;
     width: 300px;
     float: right;
@@ -130,3 +130,7 @@ input[type=number] {
     display: none;
 }
 
+.switcher {
+    display: none;
+    float: right;
+}
